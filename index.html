@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Website</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+/* HEADER */
+header {
+    background: #0b57d0;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h2 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HAMBURGER ICON */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* HERO */
+.hero {
+    background: url('https://picsum.photos/1200/400') center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 15px;
+}
+
+/* CONTAINER */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* VIDEO GRID */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* VIDEO ITEM (RESPONSIVE RATIO) */
+.video-item {
+    background: #fff;
+}
+
+.video-box {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 ratio */
+}
+
+.video-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.video-item p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>My Site</h2>
+    <div class="menu-toggle" id="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav id="nav">
+        <a href="#">Home</a>
+        <a href="#">Videos</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Welcome to My Website</h2>
+    <p>Mobile Friendly Video Website</p>
+</section>
+
+<div class="container">
+
+    <div class="card">
+        <h3>My Videos</h3>
+
+        <div class="video-grid">
+
+            <!-- VIDEO ITEMS -->
+            <div class="video-item">
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="video-item">
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="video-item">
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="video-item">
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" allowfullscreen></iframe>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="video-item">
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" allowfullscreen></iframe>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="video-item">
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_6" allowfullscreen></iframe>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="video-item">
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_7" allowfullscreen></iframe>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="video-item">
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_8" allowfullscreen></iframe>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 My Website</p>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('nav');
+
+menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+</script>
+
+</body>
+</html>
